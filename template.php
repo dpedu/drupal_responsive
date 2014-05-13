@@ -51,6 +51,7 @@
 		}
 	}
 	
+	/* Don't use this */
 	function render_image_field($node, $fieldName, $format, $index=0) {
 		if(field_get_items('node', $node, $fieldName)) {
 			return render_field($node, $fieldName, $index, array( 'type' => 'image', 'settings' => array('image_style' => $format , /*'image_link' => 'content',*/)));
@@ -58,6 +59,7 @@
 			return null;
 		}
 	}
+	/* Don't use this */
 	function render_field($node, $fieldName, $index=0, $options=array()) {
 		$field = field_get_items('node', $node, $fieldName);
 		return render( field_view_value('node', $node, $fieldName, $field[$index], $options));

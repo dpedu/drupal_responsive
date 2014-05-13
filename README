@@ -1,15 +1,23 @@
-A (testing) set of base code for creating Responsive Drupal 7 themes
+A (testing) set of base code for creating Responsive Drupal 7 themes.
+
+It is absolutely minimal in my opinion. The only conventioned "baked in" are
+the use of LESS CSS and the "mobile first" principle.
+
+Some template.php customizations are included, but are not necessary.
 
 Included libraries:
 
-- breakpoints.js
+- breakpoints.js (Customized version)
 - fastclick
 - html5shiv
 - jquery-1.9.1
-- jquery-ui-1.10.4, themeless
-- fitvids
-- flexslider
-- jquery.sticky.js
 - modernizr
 - respond.js
 - selectivizr
+
+Included tools that simply add features
+
+- jquery-ui-1.10.4, themeless (Not necessary, provides a few great tools)
+- fitvids (auto-size video embeds)
+- flexslider (Not necessary, provides a great responsive Carousel)
+- jquery.sticky.js (For floating objects. TODO: Replace with something better)
