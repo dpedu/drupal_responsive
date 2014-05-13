@@ -1,0 +1,55 @@
+name = TEHEME
+description = THEME by YOU
+package = Core
+core = 7.x
+
+; Stylesheets
+
+stylesheets[all][] = css/main.less
+
+; JS Libraries
+; HTML5 shiv is included via template.php
+
+; JQuery
+scripts[] = libs/jquery-1.9.1.min.js
+
+; modernizr - browser feature detection
+scripts[] = libs/modernizr.min.js
+
+; selectivizr - css pseudo-selectors for older browsers
+scripts[] = libs/selectivizr-min.js
+
+; jQuery UI for accordion things
+scripts[] = libs/jquery-ui-1.10.4.custom.min.js
+
+; Flexslider, ie10 fix is optional. Only switch to it if there are problems
+scripts[] = libs/jquery.flexslider-min.js
+; scripts[] = libs/jquery.flexslider-ie10fix.js
+
+; Breakpoints.js - detect breakpoints. This version is customized to listen for resize events rather than relying on a timer
+scripts[] = libs/breakpoints.js
+
+; Fastclick - speed up taps on touchscreens. (Is this really necessary?)
+scripts[] = libs/fastclick.js
+
+; Fitvids - tool for scaling embedded videos. Enable as needed.
+scripts[] = libs/jquery.fitvids.js
+
+; Sticky = for sticky scrolling things.
+scripts[] = libs/jquery.sticky.js
+
+; Jquery cookie plugin. Useful if you need to manipulate cookies in javascript. Enable only if needed.
+; scripts[] = libs/jquery.cookie.js
+
+; Theme scripts
+scripts[] = js/scripts.js
+
+
+; System-defined regions
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[sidebar] = Sidebar
+regions[content] = Content
+regions[navigation] = Main Navigation
+regions[searchbox] = RIT Search Box
+regions[afternav] = After Navigation

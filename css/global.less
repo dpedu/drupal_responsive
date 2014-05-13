@@ -1,0 +1,132 @@
+@maincolor: #cd4500;
+@linkcolor: #cd4500;
+@headercolor: #000000;
+@bgcolor: #bbbbbb;
+
+// Clearfix mixin
+.cf {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Basic (barebone) styles for Flexslider
+.flexDefaults {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	.slides > li {
+		display: none;
+		-webkit-backface-visibility: hidden;
+		float: left;
+	}
+}
+
+// Block Demonstrations
+div.block-region {
+	background-color: #900;
+}
+
+// Retina Mixin - use this when developing
+// This mixin is convenient but creates 3 break points for every image added.
+// So, developing the site using this is fine, but once complete, change your
+// ".retina-image(" calls to ".image(", and moove the background-image properties
+// from the compiled stylesheet into their respective breakpoints in images.less.
+// This will minimize the number of breakpoints used, thus increasing render
+// performance.
+.retina-image(@file, @type, @w, @h) {
+	background-image: url('@{file}.@{type}');
+	background-size: @w, @h;
+	// 1.5x RETINA 
+	/* RETINA MIXIN */
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+		background-image: url('@{file}@1.5x.@{type}');
+	}
+	// 2x RETINA
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+		background-image: url('@{file}@2x.@{type}');
+	}
+	// 3x RETINA
+	@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {
+		background-image: url('@{file}@3x.@{type}');
+	}
+}
+.image(@file, @type, @w, @h) {
+	background-image: url('@{file}.@{type}');
+	background-size: @w, @h;
+}
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+// RIT bar site search form
+li#metaritsearch {
+	width: 150px;
+}
+div.region-searchbox {
+	div.content {
+		position: relative;
+		bottom: 16px;
+		label {
+			display: none;
+		}
+		input.custom-search-box.form-text {
+			background-color: transparent !important;
+			background-image: url(../img/.png);
+			.image('../img/searchbg-mobile', 'png', 138px, 19px);
+			padding: 1px 16px 1px 5px;
+			width: 117px;
+			height: 17px;
+			border: 0;
+			outline: 0;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 1;
+			&.inactive {
+				color: #a9a9a9;
+			}
+		}
+		input.form-submit {
+			position: absolute;
+			display: block;
+			top: 3px;
+			left: 120px;
+			text-indent: -10000px;
+			.image('../img/magnify', 'png', 16px, 13px);
+			background-color: transparent;
+			border: 0;
+			width: 16px;
+			height: 13px;
+			z-index: 2;
+			padding: 0;
+			cursor: pointer;
+		}
+	}
+}
+// Shadowbox IE scrolling fix
+div#sb-player {
+	overflow: hidden !important;
+}
+
+
+
+#jumpToContent{
+	position:absolute;
+	left:135px;top:25px;
+	font-weight:bold;
+	margin-left:-1000px;
+}
+#jumpToContent:focus {
+	margin-left:0 !important;
+}

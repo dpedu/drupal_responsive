@@ -1,0 +1,15 @@
+A (testing) set of base code for creating Responsive Drupal 7 themes
+
+Included libraries:
+
+- breakpoints.js
+- fastclick
+- html5shiv
+- jquery-1.9.1
+- jquery-ui-1.10.4, themeless
+- fitvids
+- flexslider
+- jquery.sticky.js
+- modernizr
+- respond.js
+- selectivizr
