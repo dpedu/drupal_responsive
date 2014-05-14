@@ -1,4 +1,4 @@
-A (testing) set of base code for creating Responsive Drupal 7 themes.
+A (testing) set of base code for creating HTML5 Responsive Drupal 7 themes.
 
 It is absolutely minimal in my opinion. The only conventioned "baked in" are
 the use of LESS CSS and the "mobile first" principle.
